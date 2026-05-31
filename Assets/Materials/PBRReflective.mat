@@ -48,7 +48,7 @@ Material:
     - _BumpScale: 1
     - _DetailBumpScale: 0.3
     - _Metallic: 1
-    - _Smoothness: 0.903
+    - _Smoothness: 1
     m_Colors:
     - _SpecularTint: {r: 0.6117647, g: 0, b: 0, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
