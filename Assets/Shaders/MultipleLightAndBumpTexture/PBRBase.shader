@@ -30,7 +30,7 @@ Shader "Custom/PBRBase"
                 "LightMode" = "ForwardBase"
             }
             CGPROGRAM
-            #pragma multi_compile _ VERTEXLIGHT_ON
+            #pragma multi_compile_fwdbase
             #define FORWARD_BASE_PASS
             #include "My Lighting.cginc"
             ENDCG
@@ -43,9 +43,26 @@ Shader "Custom/PBRBase"
             Blend One One
             ZWrite Off
             CGPROGRAM
-            #pragma multi_compile_fwdadd
+            #pragma multi_compile_fwdadd_fullshadows
             #include "My Lighting.cginc"
             ENDCG
+        }
+        Pass
+        {
+            Tags{
+                "LightMode" = "ShadowCaster"
+            }
+            CGPROGRAM
+
+			#pragma target 3.0
+            
+			#pragma vertex MyShadowVertexProgram
+			#pragma fragment MyShadowFragmentProgram
+            #pragma multi_compile_shadowcaster
+            
+			#include "My Shadows.cginc"
+
+			ENDCG
         }
     }
 }
