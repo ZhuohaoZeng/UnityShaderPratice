@@ -7,12 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PBRReflective
+  m_Name: Circuitry
   m_Shader: {fileID: 4800000, guid: 51d95ab094aca4e4dbf359d4d0f4e3a3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _SMOOTHNESS_ALBEDO
+  - _EMISSION_MAP
+  - _METALLIC_MAP
+  - _SMOOTHNESS_METALLIC
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,20 +34,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 325bac26e3ca70145bb4a1c32f640607, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 2800000, guid: 5c6c105c8f051c547bda46097b2bef71, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dfaf8718c303dca47ba218584ee59db9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1d6987811fcd64943ab4f74c23a8eb56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9a1a4f893f2ae2b4d89afbf95d1f0e4d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -55,6 +61,7 @@ Material:
     - _Metallic: 1
     - _Smoothness: 1
     m_Colors:
+    - _Emission: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularTint: {r: 0.6117647, g: 0, b: 0, a: 1}
     - _Tint: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_BuildTextureStacks: []
